@@ -77,9 +77,9 @@
         <h2 id="overview">Overview</h2>
 
         <p>
-          gSAM–Chem builds on the global System for Atmospheric Modeling (gSAM) version 1.8
+          gSAM–Chem builds on the global System for Atmospheric Modeling (gSAM) version 1.8.7
           and adds a new chemistry module that is called at every model time step after the
-          microphysics module and before the radiation module (Figure 1 below; Yoon et al.,
+          microphysics module (Figure 1 below; Yoon et al.,
           in prep.). The chemistry module checks for the tropopause height (identified
           as the level with the lowest absolute temperature in the column) and zeros
           all chemical species above it, since the implemented mechanism is not
@@ -92,7 +92,7 @@
         <ul>
           <li><strong>Turbulence:</strong> Smagorinsky-type SGS closure (SGS_TKE)</li>
           <li><strong>Radiation:</strong> Two-stream RRTM4PBL</li>
-          <li><strong>Advection:</strong> SELPM scheme</li>
+          <li><strong>Advection:</strong> Multidimensional Positive Definite Advection Transport Algorithm (ADV_MPDATA) (Smolarkiewicz, 2006)</li>
           <li><strong>Microphysics:</strong> Double-moment Morrison et al. (2005) with QuickBeam radar reflectivity submodule</li>
         </ul>
 
@@ -248,7 +248,7 @@
           gSAM–Chem adds an interactive 2D surface soil moisture variable that
           evolves at each time step in response to simulated precipitation and
           a drying time scale. Soil moisture was initialized from MERRA-2
-          (θ = 0.86 for the wet season, θ = 0.72 for the dry season) and
+          (θ = 0.70 for the wet season, θ = 0.54 for the dry season) and
           tuned to match ATTO tower observations.
         </p>
 
@@ -373,14 +373,14 @@
           <tbody>
             <tr>
               <td>2D wet season</td>
-              <td>256 × 256</td>
+              <td>512 × 256</td>
               <td>66.6 m</td>
               <td>40 m</td>
               <td>Mar 5–19, 2014</td>
             </tr>
             <tr>
               <td>2D dry season</td>
-              <td>256 × 256</td>
+              <td>512 × 256</td>
               <td>66.6 m</td>
               <td>40 m</td>
               <td>Sep 19 – Oct 3, 2014</td>
@@ -405,7 +405,7 @@
           Large-scale forcing uses a 3-hourly, 25 mb resolution constrained
           variational analysis from the ARM Mobile Facility (M1) near
           Manacapuru, Brazil (Zhang et al., 2001). The 3D wet season simulation
-          ran in ~1.5 days wall-time per simulation day using 256 cores across
+          ran in ~18 hours per simulation day using 256 cores across
           8 compute nodes.
         </p>
 

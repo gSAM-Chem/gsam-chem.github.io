@@ -70,7 +70,7 @@
         <!-- ---- PREREQUISITES ---- -->
         <h2 id="prerequisites">Prerequisites</h2>
 
-        <p>gSAM–Chem builds on gSAM version 1.8 and requires:</p>
+        <p>gSAM–Chem builds on gSAM version 1.8.7 and requires:</p>
 
         <ul>
           <li>A Fortran compiler (Intel <code>ifort</code>/<code>ifx</code> or GNU <code>gfortran ≥ 9</code>)</li>
@@ -257,7 +257,7 @@ setenv HET_CHEM  HET_CHEM</code></pre>
   do_bdsnp_no              = .true.
   do_CTG_lightning         = .true.
   do_IC_lightning          = .true.
-  soil_wetness             = 0.86,   ! MERRA-2 wet season value
+  soil_wetness             = 0.70,   ! MERRA-2 wet season value
   ...
 /</code></pre>
 
@@ -288,8 +288,8 @@ qsub gsam.run</code></pre>
 
         <p>
           A 3D simulation adds the second horizontal dimension, enabling resolved
-          convective cells and three-dimensional transport. Budget roughly 1.5 days
-          wall-time per simulation day on 256 cores (8 nodes).
+          convective cells and three-dimensional transport. Budget roughly ~18 hours
+          per simulation day on 256 cores (8 nodes).
         </p>
 
         <p>
