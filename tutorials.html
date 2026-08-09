@@ -104,29 +104,29 @@ cd gsam-chem</code></pre>
         <p>The repository layout is:</p>
 
         <pre><code>gsam-chem/
-├── SRC/                    # Fortran source (gSAM + chemistry module)
-│   ├── CHEMISTRY/          # Chemistry module
-│   │   ├── CLOUDCHEM/      # CloudChem KPP mechanism (.kpp, .f90)
-│   │   └── HET_CHEM/       # Heterogeneous chemistry
-│   ├── SLM/                # Simple Land Model
-│   ├── MICRO_M2005/        # Microphysics
-│   ├── SGS_TKE/            # Turbulence closure
-│   ├── RAD_RRTM/           # Radiation
-│   └── ...                 # Other dynamical core modules
-├── CASES/                  # Example case directories
-│   └── goAMAZON_deep_convection/
-├── SCRIPTS/                # Post-processing utilities
-├── GLOBAL_DATA/            # Global data files (SST, ozone, etc.)
-├── GRIDS/                  # Grid definition files
-├── UTIL/                   # Utilities
-├── Changes/                # Changelog
-├── DOC/                    # Documentation
-├── OBJ/                    # Build output (created at compile time)
-├── Build                   # Build script (csh)
-├── CaseName                # Active case name
-├── gSAM                    # Compiled executable
-├── gsam.run                # Job submission script
-└── Makefile                # Makefile</code></pre>
+├── SRC/                            # Fortran source (gSAM + chemistry module)
+│   ├── CHEMISTRY/                  # Chemistry module
+│   │   ├── CLOUDCHEM/              # CloudChem KPP mechanism (.kpp, .f90)
+│   │   └── HET_CHEM/               # Heterogeneous chemistry
+│   ├── SLM/                        # Simple Land Model
+│   ├── MICRO_M2005/                # Microphysics
+│   ├── SGS_TKE/                    # Turbulence closure
+│   ├── RAD_RRTM/                   # Radiation
+│   └── ...                         # Other dynamical core modules
+├── CASES/                          # Pre-configured case directories
+│   └── goAMAZON_deep_convection/   # Example case (GoAmazon IOP2)
+├── SCRIPTS/                        # Post-processing utilities
+├── GLOBAL_DATA/                    # Global data files (SST, ozone, etc.)
+├── GRIDS/                          # Grid definition files
+├── UTIL/                           # Utilities
+├── Changes/                        # Changelog
+├── DOC/                            # Documentation
+├── OBJ/                            # Build output (created at compile time)
+├── Build                           # Build script (csh)
+├── CaseName                        # Active case name
+├── gSAM                            # Compiled executable
+├── gsam.run                        # Job submission script
+└── Makefile                        # Makefile</code></pre>
 
         <!-- ---- BUILD ---- -->
         <h2 id="build">Building gSAM–Chem</h2>
